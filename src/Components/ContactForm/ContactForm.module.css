@@ -1,0 +1,24 @@
+.form {
+  border: 1px solid #000000;
+  width: 400px;
+  height: 120px;
+}
+
+.name {
+  margin-left: 30px;
+}
+
+.number {
+  margin-left: 14px;
+}
+
+.btn {
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.btn:active {
+  background-color: #3255a1;
+  color: #ffffff;
+}
