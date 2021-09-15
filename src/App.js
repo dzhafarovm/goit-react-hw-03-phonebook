@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import shortid from "shortid";
 import { ContactForm } from "./Components/ContactForm/ContactForm.jsx";
 import { ContactList } from "./Components/ContactList/ContactList.jsx";
@@ -36,7 +37,15 @@ export class App extends Component {
         (con) => con.name.toLowerCase() === contact.name.toLowerCase()
       )
     ) {
-      alert(`${contact.name} is alresdy in contacts`);
+      // toast(`${contact.name} is alresdy in contacts`);
+      toast(`${contact.name} is alresdy in contacts`, {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
       return;
     } else
       this.setState((prevState) => ({
@@ -78,6 +87,7 @@ export class App extends Component {
           contacts={this.onFilteredContacts()}
           onDeleteContact={this.deleteContacs}
         />
+        <Toaster />
       </div>
     );
   }
