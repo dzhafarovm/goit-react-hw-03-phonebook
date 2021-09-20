@@ -39,7 +39,7 @@ export class App extends Component {
     ) {
       // toast(`${contact.name} is alresdy in contacts`);
       toast(`${contact.name} is alresdy in contacts`, {
-        icon: "👏",
+        icon: "❗❗❗",
         style: {
           borderRadius: "10px",
           background: "#333",
@@ -87,7 +87,7 @@ export class App extends Component {
           contacts={this.onFilteredContacts()}
           onDeleteContact={this.deleteContacs}
         />
-        <Toaster />
+        <Toaster position="top-right" />
       </div>
     );
   }
